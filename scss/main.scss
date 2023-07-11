@@ -10,22 +10,27 @@ html {
   min-height: 100%;
 }
 
+main{
+  margin-bottom: 250px;
+}
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 15px;
-
+  
 }
 
 .hero-scene {
   position: relative;
+  padding: 30px 0px;
+
   &::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 300px;
+    width: 100%; height: 100%;
     background-image: url(../images/FondHeroScene.jpg);
     background-size:cover;
     filter: brightness(0.3);
