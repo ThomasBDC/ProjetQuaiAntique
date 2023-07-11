@@ -1,30 +1,11 @@
-class Route {
-    constructor(url, title, pathHtml, pathJS = "", pathCSS = "") {
-      this.url = url;
-      this.title = title;
-      this.pathHtml = pathHtml;
-      this.pathJS = pathJS;
-      this.pathCSS = pathCSS;
-    }
-}
-
-const routeEvent = (event) => {
-    event = event || window.event;
-    event.preventDefault();
-    window.history.pushState({}, "", event.target.href);
-    LoadContentPage();
-};
-
+import Route from "./Route.js";
+import allRoutes from "./allRoutes.js";
 
 const route404 = new Route("404", "Page introuvable", "/pages/404.html");
 
-const routes = [
-    new Route("/", "Restaurant Quai Antique", "/pages/home.html"),
-];
-
 const getRouteByUrl = (url) => {
     let currentRoute = null;
-    routes.forEach(element => {
+    allRoutes.forEach(element => {
         if(element.url == url){
             currentRoute = element;
         }
@@ -51,6 +32,13 @@ const LoadContentPage = async () => {
     
         document.querySelector("body").appendChild(scriptTag);
     }
+};
+
+const routeEvent = (event) => {
+    event = event || window.event;
+    event.preventDefault();
+    window.history.pushState({}, "", event.target.href);
+    LoadContentPage();
 };
 
 window.onpopstate = LoadContentPage;
