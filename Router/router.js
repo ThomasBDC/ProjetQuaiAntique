@@ -21,17 +21,21 @@ const getRouteByUrl = (url) => {
 const LoadContentPage = async () => {
     const path = window.location.pathname;
     //Ajout de l'html
-    const html = await fetch(getRouteByUrl(path).pathHtml).then((data) => data.text());
+    const actualRoute = getRouteByUrl(path);
+    const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
     document.getElementById("main-page").innerHTML = html;
 
     //Ajout du js
-    if(getRouteByUrl(path).pathJS != ""){
+    if(actualRoute.pathJS != ""){
         var scriptTag = document.createElement('script');
         scriptTag.setAttribute("type","text/javascript");
-        scriptTag.setAttribute("src", getRouteJS());
+        scriptTag.setAttribute("src", actualRoute.pathJS);
     
         document.querySelector("body").appendChild(scriptTag);
     }
+
+    //Change Title
+    document.title = actualRoute.title;
 };
 
 const routeEvent = (event) => {
