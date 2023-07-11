@@ -11911,6 +11911,7 @@ textarea.form-control-lg {
 }
 p {
   font-family: "Hind Madurai", serif;
+  font-size: 18px;
 }
 
 html {
@@ -11954,4 +11955,26 @@ main {
   flex-direction: column;
   justify-content: center;
   margin-top: -15px;
+}
+
+.image-card {
+  position: relative;
+  text-align: center;
+}
+.image-card img {
+  transition: all 0.3s;
+}
+.image-card .titre-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.image-card:hover .titre-image {
+  opacity: 1;
+}
+.image-card:hover img {
+  filter: brightness(0.3);
 }/*# sourceMappingURL=main.css.map */

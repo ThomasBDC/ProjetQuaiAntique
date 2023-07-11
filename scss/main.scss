@@ -3,6 +3,7 @@
 
 p{
   font-family: $font-family-serif;
+  font-size: 18px;
 }
 
 html {
@@ -46,4 +47,32 @@ main{
     justify-content: center;
     margin-top: -15px;
   }
+}
+
+.image-card{
+  position: relative;
+  text-align: center;
+
+  img{
+    transition: all 0.3s;
+  }
+  
+  .titre-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  &:hover{
+    .titre-image{
+      opacity: 1;
+    }
+    img{
+      filter: brightness(0.3)
+    }
+  }
+ 
 }

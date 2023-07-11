@@ -1,8 +1,12 @@
 import Route from "./Route.js";
 
 //Définir ici vos routes
-const allRoutes = [
-    new Route("/", "Restaurant Quai Antique", "/pages/home.html"),
+export const allRoutes = [
+    new Route("/", "Accueil", "/pages/home.html"),
+    new Route("/galerie", "La galerie", "/pages/galerie.html"),
 ];
 
-export default allRoutes;
+//Le titre s'affiche comme ceci : Route.titre - websitename
+
+
+export const websiteName = "Quai Antique";

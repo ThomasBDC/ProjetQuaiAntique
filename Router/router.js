@@ -1,5 +1,5 @@
 import Route from "./Route.js";
-import allRoutes from "./allRoutes.js";
+import {allRoutes, websiteName} from "./allRoutes.js";
 
 const route404 = new Route("404", "Page introuvable", "/pages/404.html");
 
@@ -35,7 +35,7 @@ const LoadContentPage = async () => {
     }
 
     //Change Title
-    document.title = actualRoute.title;
+    document.title = actualRoute.title + " - "+ websiteName;
 };
 
 const routeEvent = (event) => {
