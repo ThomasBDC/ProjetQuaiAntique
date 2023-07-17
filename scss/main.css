@@ -11977,4 +11977,8 @@ main {
 }
 .image-card:hover img {
   filter: brightness(0.3);
+}
+
+.form-label {
+  color: #906427;
 }/*# sourceMappingURL=main.css.map */
