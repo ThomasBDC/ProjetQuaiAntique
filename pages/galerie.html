@@ -14,7 +14,7 @@
                 <p class="titre-image">Titre</p>
                 <div class="action-image-buttons">
                     <button class="btn btn-outline-light" type="button"><i class="bi bi-trash3"></i></button>
-                    <button class="btn btn-outline-light" type="button"><i class="bi bi-pencil-square"></i></button>
+                    <button data-bs-toggle="modal" data-bs-target="#modalEditionImage" class="btn btn-outline-light" type="button"><i class="bi bi-pencil-square"></i></button>
                 </div>
             </div>
         </div>
@@ -49,5 +49,31 @@
             </div>
         </div>
           
+    </div>
+</div>
+
+<!-- Modal d'édition -->
+<div class="modal fade" id="modalEditionImage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputTitre" class="form-label">Titre</label>
+                    <input placeholder="Titre de l'image" type="text" class="form-control" id="exampleInputTitre">
+                </div>
+                <div class="mb-3">
+                    <label for="FileImage" class="form-label">Fichier</label>
+                    <input type="file" class="form-control" id="FileImage">
+                </div>
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary m-auto">Enregistrer</button>
+                    </div>
+            </form>
+        </div>
     </div>
 </div>
