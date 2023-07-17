@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row hero-scene text-white text-center">
         <div class="hero-scene-content">
-            <h1>Connexion</h1>
+            <h1>Inscription</h1>
         </div>
     </div>
 </div>
@@ -10,13 +10,25 @@
 <div class="container p-5">
     <form>
         <div class="mb-3">
+            <label for="exampleInputNom" class="form-label">Nom</label>
+            <input placeholder="Votre nom" type="text" class="form-control" id="exampleInputNom">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPreNom" class="form-label">Prénom</label>
+            <input placeholder="Votre prénom" type="text" class="form-control" id="exampleInputPreNom">
+        </div>
+        <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input placeholder="test@mail.com" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input placeholder="test@mail.com" type="email" class="form-control" id="exampleInputEmail1">
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
           <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
+        <div class="mb-3">
+            <label for="validPassword" class="form-label">Validez votre mot de passe</label>
+            <input type="password" class="form-control" id="validPassword">
+          </div>
         <div class="mb-3 text-center">
             <button type="submit" class="btn btn-primary m-auto">Connexion</button>
           </div>
