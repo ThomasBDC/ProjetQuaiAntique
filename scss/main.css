@@ -11972,6 +11972,18 @@ main {
   opacity: 0;
   transition: all 0.3s;
 }
+.image-card .action-image-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+}
+.image-card:hover .action-image-buttons,
 .image-card:hover .titre-image {
   opacity: 1;
 }
