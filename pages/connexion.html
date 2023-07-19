@@ -8,17 +8,20 @@
 
 
 <div class="container p-5">
-    <form>
+    <form id="connexionFormulaire">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input placeholder="test@mail.com" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input placeholder="test@mail.com" type="email" class="form-control" 
+          id="exampleInputEmail1" aria-describedby="emailHelp"
+          name="email">
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+          <div class="invalid-feedback">Données invalides</div>
         </div>
         <div class="mb-3 text-center">
-            <button type="submit" class="btn btn-primary m-auto">Connexion</button>
+            <button type="button" class="btn btn-primary m-auto" id="validConnexionForm">Connexion</button>
           </div>
     </form>
     <div class="text-center">

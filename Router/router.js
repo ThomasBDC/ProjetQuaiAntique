@@ -26,6 +26,20 @@ const LoadContentPage = async () => {
   const path = window.location.pathname;
   // Récupération de l'URL actuelle
   const actualRoute = getRouteByUrl(path);
+  debugger;
+  if(actualRoute.authorize.length > 0){
+    if(actualRoute.authorize.includes("disconnected")){
+      if(isConnected()){
+        window.location.replace("/account");
+      }
+    }
+    else{
+      if(!actualRoute.authorize.includes(getRole())){
+        window.location.replace("/login");
+      }
+    }
+  }
+
   // Récupération du contenu HTML de la route
   const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
   // Ajout du contenu HTML à l'élément avec l'ID "main-page"
@@ -44,6 +58,7 @@ const LoadContentPage = async () => {
 
   // Changement du titre de la page
   document.title = actualRoute.title + " - " + websiteName;
+  showAndHideElementsOnConnexion();
 };
 
 // Fonction pour gérer les événements de routage (clic sur les liens)

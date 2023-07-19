@@ -35,8 +35,11 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/account">Mon compte</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" data-show="disconnected">
                     <a class="nav-link" href="/login">Connexion</a>
+                  </li>
+                  <li class="nav-item" data-show="connected">
+                    <button type="button" class="nav-link" onclick="logout()">Déconnexion</button>
                   </li>
                 </ul>
               </div>
