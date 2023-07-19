@@ -7,6 +7,12 @@ inputPassword.addEventListener("keyup", validateForm);
 const inputConfirmationPassword = document.getElementById('validPassword');
 inputConfirmationPassword.addEventListener("keyup", validateForm);
 
+const inputNom = document.getElementById('exampleInputNom');
+inputNom.addEventListener("keyup", validateForm);
+
+const inputPrenom = document.getElementById('exampleInputPreNom');
+inputPrenom.addEventListener("keyup", validateForm);
+
 const btnValidationForm = document.getElementById("btn-validation-form");
 
 function validateMail(){
@@ -48,14 +54,29 @@ function validateConfirmationPassword(){
     }
 }
 
+function validateRequired(input){
+    if(input.value != ''){
+        input.classList.remove("is-invalid");
+        input.classList.add("is-valid");
+        return true;
+    }
+    else{
+        input.classList.add("is-invalid");
+        input.classList.remove("is-valid");
+        return false;
+    }
+}
+
 function validateForm(){
     const btn = document.getElementById("btn-validation-inscription");
 
     const mailOk = validateMail();
     const passwordOk = validationPassword();
     const confirmationPwOk = validateConfirmationPassword();
+    const nomOk = validateRequired(inputNom);
+    const prenomOk = validateRequired(inputPrenom);
     
-    if(mailOk && passwordOk && confirmationPwOk){
+    if(mailOk && passwordOk && confirmationPwOk && nomOk && prenomOk){
         btn.disabled = false;
     }
     else{
