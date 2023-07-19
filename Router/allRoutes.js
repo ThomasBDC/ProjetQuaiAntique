@@ -5,7 +5,7 @@ export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
     new Route("/galerie", "La galerie", "/pages/galerie.html", "/js/galerie.js"),
     new Route("/login", "Connexion", "/pages/connexion.html"),
-    new Route("/signup", "Inscription", "/pages/signup.html"),
+    new Route("/signup", "Inscription", "/pages/signup.html", "js/signup.js"),
     new Route("/account", "Mon compte", "/pages/account.html"),
     new Route("/allBook", "Les réservation", "/pages/book/allBook.html"),
     new Route("/book", "Réserver", "/pages/book/book.html"),
