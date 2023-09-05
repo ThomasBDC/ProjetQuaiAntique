@@ -16,7 +16,7 @@ inputPrenom.addEventListener("keyup", validateForm);
 const btnValidationForm = document.getElementById("btn-validation-form");
 
 function validateMail(){
-    var validRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    var validRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (inputMail.value.match(validRegex)) {
         inputMail.classList.remove("is-invalid");
         inputMail.classList.add("is-valid");

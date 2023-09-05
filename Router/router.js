@@ -26,7 +26,6 @@ const LoadContentPage = async () => {
   const path = window.location.pathname;
   // Récupération de l'URL actuelle
   const actualRoute = getRouteByUrl(path);
-  debugger;
   if(actualRoute.authorize.length > 0){
     if(actualRoute.authorize.includes("disconnected")){
       if(isConnected()){

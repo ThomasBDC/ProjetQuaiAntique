@@ -82,3 +82,20 @@ function showAndHideElementsOnConnexion(){
             }
     });
 }
+
+var sanitizeHTML = function (str) {
+	var temp = document.createElement('div');
+	temp.textContent = str;
+	return temp.innerHTML;
+};
+
+
+function setCookieJWT(value) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (7*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = "JWT=" + (value || "")  + expires + "; path=/; HttpOnly; Secure ";
+}
