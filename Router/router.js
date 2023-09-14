@@ -29,12 +29,12 @@ const LoadContentPage = async () => {
   if(actualRoute.authorize.length > 0){
     if(actualRoute.authorize.includes("disconnected")){
       if(isConnected()){
-        window.location.replace("/account");
+        window.location.replace("account");
       }
     }
     else{
       if(!actualRoute.authorize.includes(getRole())){
-        window.location.replace("/login");
+        window.location.replace("login");
       }
     }
   }

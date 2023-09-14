@@ -13,7 +13,8 @@ inputNom.addEventListener("keyup", validateForm);
 const inputPrenom = document.getElementById('exampleInputPreNom');
 inputPrenom.addEventListener("keyup", validateForm);
 
-const btnValidationForm = document.getElementById("btn-validation-form");
+const btnValidationForm = document.getElementById("btn-validation-inscription");
+const formInscription = document.getElementById("formSignup");
 
 function validateMail(){
     var validRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -82,5 +83,50 @@ function validateForm(){
     else{
         btn.disabled = true;
     }
-    
 }
+
+btnValidationForm.addEventListener("click", function(){
+    let data = new FormData(formInscription);
+    let email = data.get("email");
+    let pwd = data.get("password");
+    let nom = data.get("nom");
+    let prenom = data.get("prenom");
+
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+
+    let raw = JSON.stringify({
+        "firstName": nom,
+        "lastName": prenom,
+        "email": email,
+        "password": pwd
+    });
+
+    let requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch("https://127.0.0.1:8000/api/registration", requestOptions)
+    .then(response =>{
+        if(response.status == 201){
+            return response.json();
+        }
+        else{
+            alert("Erreur lors de l'inscription");
+            console.log(response);
+        }
+    })
+    .then(result =>
+    {
+        alert("Vous êtes bien inscrit !");
+        document.location.href="/login"; 
+    })
+    .catch(error => {
+        alert("Erreur lors de l'inscription");
+        console.log('error', error);
+    });
+});

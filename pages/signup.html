@@ -8,25 +8,25 @@
 
 
 <div class="container p-5">
-    <form>
+    <form id="formSignup">
         <div class="mb-3">
             <label for="exampleInputNom" class="form-label">Nom</label>
-            <input placeholder="Votre nom" type="text" class="form-control" id="exampleInputNom" required>
+            <input placeholder="Votre nom" type="text" class="form-control" id="exampleInputNom" name="nom" required>
             <div class="invalid-feedback">Le nom est requis</div>
         </div>
         <div class="mb-3">
             <label for="exampleInputPreNom" class="form-label">Prénom</label>
-            <input placeholder="Votre prénom" type="text" class="form-control" id="exampleInputPreNom" required>
+            <input placeholder="Votre prénom" type="text" class="form-control" id="exampleInputPreNom" name="prenom" required>
             <div class="invalid-feedback">Le prénom est requis</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input placeholder="test@mail.com" type="email" class="form-control" id="exampleInputEmail1" required>
+          <input placeholder="test@mail.com" type="email" class="form-control" id="exampleInputEmail1" name="email" required>
           <div class="invalid-feedback">Le mail n'est pas au bon format</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" required>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="password" required>
           <div class="invalid-feedback">Le mot de passe n'est pas assez robuste : Au moins huit caractères, comprenant au moins une lettre majuscule, une lettre minuscule, un chiffre.</div>
           <div class="valid-feedback">Le mot de passe est robuste </div>
         </div>
@@ -36,11 +36,11 @@
             <div class="invalid-feedback">Les deux mots de passe ne correspondent pas</div>
         </div>
         <div class="mb-3 text-center">
-            <button type="submit" class="btn btn-primary m-auto" id="btn-validation-inscription">Inscription</button>
+            <button type="button" class="btn btn-primary m-auto" id="btn-validation-inscription">Inscription</button>
           </div>
     </form>
     <div class="text-center">
-        <a href="/signup">Vous n'avez pas de compte ? Inscrivez-vous ! </a>
-    </div>  
+        <a href="/connexion">Vous avez déjà un compte ? Connectez-vous ! </a>
+    </div>
 </div>
 
