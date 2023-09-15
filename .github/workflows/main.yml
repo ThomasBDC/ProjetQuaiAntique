@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: quaiantiquerestaurant.alwaysdata.net
+        server: ftp-quaiantiquerestaurant.alwaysdata.net
         username: quaiantiquerestaurant
         password: ${{ secrets.ftp_password }}
