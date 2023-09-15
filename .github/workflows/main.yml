@@ -14,3 +14,10 @@ jobs:
         server: ftp-quaiantiquerestaurant.alwaysdata.net
         username: quaiantiquerestaurant
         password: ${{ secrets.ftp_password }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/bootstrap/scss/**
+          **/node_modules/bootstrap/js/**
+          **/node_modules/bootstrap/bootstrap-icons/icons/**
+        server-dir: /www/
