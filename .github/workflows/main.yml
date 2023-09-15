@@ -19,5 +19,5 @@ jobs:
           **/.git*/**
           **/node_modules/bootstrap/scss/**
           **/node_modules/bootstrap/js/**
-          **/node_modules/bootstrap/bootstrap-icons/icons/**
+          **/node_modules/bootstrap-icons/icons/**
         server-dir: /www/
